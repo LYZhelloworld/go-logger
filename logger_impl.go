@@ -40,37 +40,37 @@ func (l loggerImpl) outputWithLevel(level string, msg string) {
 }
 
 func (l loggerImpl) Trace(msg string) {
-	if l.Enabled(Trace) {
+	if l.Enabled(LevelTrace) {
 		l.outputWithLevel("TRACE", msg)
 	}
 }
 
 func (l loggerImpl) Debug(msg string) {
-	if l.Enabled(Debug) {
+	if l.Enabled(LevelDebug) {
 		l.outputWithLevel("DEBUG", msg)
 	}
 }
 
 func (l loggerImpl) Info(msg string) {
-	if l.Enabled(Info) {
+	if l.Enabled(LevelInfo) {
 		l.outputWithLevel("INFO", msg)
 	}
 }
 
 func (l loggerImpl) Warn(msg string) {
-	if l.Enabled(Warn) {
+	if l.Enabled(LevelWarn) {
 		l.outputWithLevel("WARN", msg)
 	}
 }
 
 func (l loggerImpl) Error(msg string) {
-	if l.Enabled(Error) {
+	if l.Enabled(LevelError) {
 		l.outputWithLevel("ERROR", msg)
 	}
 }
 
 func (l loggerImpl) Fatal(msg string) {
-	if l.Enabled(Fatal) {
+	if l.Enabled(LevelFatal) {
 		l.outputWithLevel("FATAL", msg)
 	}
 }
